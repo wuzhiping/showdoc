@@ -1,0 +1,14 @@
+version: '2'
+services:
+  showdoc:
+    image: star7th/showdoc
+    restart: always
+    user: root
+    privileged: true
+    ports:
+      - "4999:80"
+    volumes:
+      - ./showdoc/html/:/var/www/html/
+    stdin_open: true
+    tty: true
+  
